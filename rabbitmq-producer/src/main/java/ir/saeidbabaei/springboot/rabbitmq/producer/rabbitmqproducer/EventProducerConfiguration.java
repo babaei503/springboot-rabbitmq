@@ -17,8 +17,8 @@ public class EventProducerConfiguration {
  }
 
  @Bean
- public CustomerService customerService(RabbitTemplate rabbitTemplate, Exchange eventExchange) {
-   return new CustomerService(rabbitTemplate, eventExchange);
+ public ProducerService producerService(RabbitTemplate rabbitTemplate, Exchange eventExchange) {
+   return new ProducerService(rabbitTemplate, eventExchange);
  }
 
 }
